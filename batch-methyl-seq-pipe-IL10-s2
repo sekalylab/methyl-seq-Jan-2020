@@ -1,0 +1,10 @@
+#!/bin/bash
+#SBATCH -o test.methyl-seq-pipe-IL10-s2.o%j
+#SBATCH --time=100:30:00      # 20 minutes of wall time
+#SBATCH -c 4                 # 1 processor
+#SBATCH --mem=50gb             # Assign 2gb memory; default in 1gb
+
+bash script-methyl-seq 2-760741.bam  
+bash script-methyl-seq 2-760743.bam      
+bash script-methyl-seq 2-760744.bam   
+bash script-methyl-seq 2-760745.bam    
