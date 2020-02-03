@@ -6,3 +6,5 @@ master shell script:      script-methyl-seq
 Slurm batch running script:     batch-methyl-seq-pipe-IL10-s2
 
 one methyl-seq bam file with ~50GB will take ~12 hours
+
+g++ -o sam-overlap-rp sam-overlap-rp.C
