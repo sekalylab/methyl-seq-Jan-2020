@@ -83,6 +83,13 @@ methyl-seq-level.strandOnly \
     reverse
 rm $watsonPileFile
 
+# concatenate cpg position
+watsonAnnotFile=$(echo $watsonCPGfile | \
+                    sed -r 's/.cpg.txt/.annot.cpg.txt/g')
+paste /home/lxm416/hg19/hg19.CpG.sites.list \
+      $watsonCPGfile > $watsonAnnotFile
+rm $watsonCPGfile
+
 # convert to BAM
 crickBamFile=$(echo $crickFile | \
                     sed -r 's/.sam/.bam/g')
@@ -118,3 +125,10 @@ methyl-seq-level.strandOnly \
     5 \
     reverse
 rm $crickPileFile
+
+# concatenate cpg position
+crickAnnotFile=$(echo $crickCPGfile | \
+                    sed -r 's/.cpg.txt/.annot.cpg.txt/g')
+paste /home/lxm416/hg19/hg19.CpG.sites.list \
+      $crickCPGfile > $crickAnnotFile
+rm $crickCPGfile
