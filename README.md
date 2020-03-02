@@ -1,10 +1,10 @@
-# methyl-seq-Jan-2020
-# methyl-seq data processing
+# methylSeq data processing pipeline
 
-master shell script:      script-methyl-seq
-
-Slurm batch running script:     batch-methyl-seq-pipe-IL10-s2
-
-one methyl-seq bam file with ~50GB will take ~12 hours
-
-g++ -o sam-overlap-rp sam-overlap-rp.C
+master shell script:      script-methyl-seq.sh  
+Slurm batch running script:     batch-methyl-seq.slurm  
+  
+one methyl-seq bam file with ~50GB will take ~12 hours  
+  
+## prerequisite
+g++ -o sam-overlap-rp sam-overlap-rp.C  
+g++ -o methyl-seq-level.strandOnly methyl-seq-level.strandOnly.C  
